@@ -1,0 +1,16 @@
+export default function handler(req, res) {
+  const lines = [
+ "🎬 Missed the stream? Catch the VODs here:",
+    "🔴 Live moments, saved forever — YouTube:",
+    "🎮 Game replays & highlights uploaded on:",
+    "🚀 Watch all the chaos again on:",
+    "🕹️ Full streams, zero FOMO — click:",
+    "⭐ Support me beyond Twitch, check out:",
+    "⚡ Rewind the action, only on:"
+];
+
+  const yt = "https://www.youtube.com/channel/YOUR_CHANNEL_ID"; // <- replace
+
+  const randomLine = lines[Math.floor(Math.random() * lines.length)];
+  res.status(200).send(`${randomLine} ${yt}`);
+}
